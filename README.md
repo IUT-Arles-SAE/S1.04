@@ -12,3 +12,5 @@ The most easy way to use this repo is to use the github desktop app. You can dow
 ***Please DO NOT use compressed files.***
 
 ***do not forget to update your local file before editing them !***
+
+You can find the order [here](consigne.md)
