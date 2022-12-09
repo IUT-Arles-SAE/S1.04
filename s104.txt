@@ -10,6 +10,7 @@ contact 2
 La qualité des données est bonnes toutefois elle peut être amélioré notamment en ce qui concerne la table "client".
 En effet les données nom/telephone/fonction des contacts 1 et 2 peuvent être implémanté via une table tierce qui serait dépendente de la table client.
 Cette nouvelle table nommé "contact" aura pour valeur NOM/telephone/fonction et il existera strictement 2 contacts pour 1 client.
+
 diagramme:
 ___________
 | contact |
@@ -17,7 +18,7 @@ ___________
 |   NOM   |
 |telephone|
 |fonction |
------------
+|---------|
 
 schema donnée:
 _______________________
@@ -29,8 +30,32 @@ _______________________
 |---------------------|
 
 
+contact 2..2 client 1..1
 
 
+CREATE TABLE contact
+{
+ nom varchar(50) PRIMARY KEY,
+ telephone varchar(12),
+ fonction varchar(20)
+},
 
+ALTER TABLE client
+DROP NOMCONTACT1
+
+ALTER TABLE client
+DROP NOMCONTACT2
+
+ALTER TABLE client
+DROP TELEPHONECONTACT1
+
+ALTER TABLE client
+DROP TELEPHONECONTACT2
+
+ALTER TABLE client
+DROP FONCTIONCONTACT1
+
+ALTER TABLE client
+DROP FONCTIONCONTACT2+
 
 
