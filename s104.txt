@@ -2,6 +2,14 @@ Client: -> dans une table tierce, contact a besoin de client pour exister
 contact 1
 contact 2
 
+(table client) enlever contact1 / contact2
+(table commande) montant TTC à enlever -> calculable à partir de HTC
+(table article) code barre à enlever / numéro article à enlever / reference interne à mettre en clé primaire
+(add table contact) value(nom primary key, telephone, fonction)
+
+
+!!!!!! zone autour de tarif vente bizarre !!!!!!
+
 
 //etiquette 1..1  |  1..* client
 //liste de prix 1..1 |  1..1 client
@@ -10,6 +18,9 @@ contact 2
 La qualité des données est bonnes toutefois elle peut être amélioré notamment en ce qui concerne la table "client".
 En effet les données nom/telephone/fonction des contacts 1 et 2 peuvent être implémanté via une table tierce qui serait dépendente de la table client.
 Cette nouvelle table nommé "contact" aura pour valeur NOM/telephone/fonction et il existera strictement 2 contacts pour 1 client.
+
+
+selon nous la table de données est assez bien construite 
 
 diagramme:
 ___________
@@ -56,6 +67,9 @@ ALTER TABLE client
 DROP FONCTIONCONTACT1
 
 ALTER TABLE client
-DROP FONCTIONCONTACT2+
+DROP FONCTIONCONTACT2
+
+ALTER TABLE commande
+DROP MONTANTTTC
 
 
